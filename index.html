@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <style>
+        /* Style for the dummy image boxes */
+        .dummy-box {
+            position: relative;
+            width: 80px;
+            height: 80px; /* Set a fixed height */
+            margin: 5px;
+            border: 2px dashed #ccc;
+            cursor: pointer;
+            display: inline-block;
+            align-items: center;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .dummy-box .img_preview {
+            width: 100%;
+            height: 100%; /* Ensure the image fits within the box */
+            object-fit: contain;
+            display: none;
+        }
+
+        .dummy-box .remove-image {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            padding: 4px;
+            display: none;
+        }
+
+        .camera_plus{
+            height: 30%;
+            margin-top:23px;
+        }
+
+        /* Style for the hidden input field */
+        #imageInput {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="imageInput" accept="image/*" multiple>
+    <div class="dummy-boxes" id="dummyBoxes">
+       
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            
+            <br>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            <div class="dummy-box" >
+                <span class="remove-image" onclick="removeImage(this)">&times;</span>
+                <img class="img_preview" src="" alt="Uploaded Image">
+                <img class="camera_plus" src="camera_plus.png" alt="Camera Plus" onclick="triggerFileInput()">
+            </div>
+            
+            <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Trigger the hidden file input when a dummy box is clicked
+        function triggerFileInput() {
+            $('#imageInput').click();
+        }
+
+        // Handle image selection and display previews
+        $('#imageInput').on('change', function () {
+            var files = this.files;
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+
+                if (file.type.startsWith('image/')) {
+                    var dummyBox = $('.dummy-box img[src=""]').first().closest('.dummy-box');
+                    var img = dummyBox.find('.img_preview');
+                    img.attr('src', URL.createObjectURL(file)).show();
+                    dummyBox.find('.remove-image').show();
+                    dummyBox.find('.camera_plus').hide();
+                }
+            }
+        });
+
+        // Remove an image from a dummy box
+        function removeImage(button) {
+            var dummyBox = $(button).closest('.dummy-box');
+            var img = dummyBox.find('.img_preview');
+            img.attr('src', '').hide();
+            dummyBox.find('.remove-image').hide();
+            dummyBox.find('.camera_plus').show();
+
+        }
+    </script>
+</body>
+</html>
